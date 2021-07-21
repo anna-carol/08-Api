@@ -4,7 +4,7 @@ const db = new sqlite3.Database('./src/infra/database.db')
 const MOBILIA_SCHEMA = `
 CREATE TABLE IF NOT EXISTS "MOBILIA" (
     "ID" INTEGER PRIMARY KEY AUTOINCREMENT,
-    "TIPO-MOBILIA" varchar(64),
+    "TIPOMOBILIA" varchar(64),
     "COR" varchar(64),
     "MANUTENCAO" varchar(3)
   );`;
