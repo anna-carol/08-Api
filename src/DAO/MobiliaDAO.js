@@ -25,6 +25,17 @@ class MobiliaDAO{
             })
         })
     }
+    deteleMobiliaFromId(id){
+        return new Promise((resolve, reject) =>{
+            this.db.all("DELETE FROM MOBILIA WHERE ID = (?)", id, (err) =>{
+                if(err){
+                    reject(err)
+                }else{
+                    resolve()
+                }
+            })
+        })
+    }
 }
 
 module.exports = MobiliaDAO

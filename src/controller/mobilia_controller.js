@@ -35,4 +35,19 @@ module.exports = (app, db) => {
             })
         })
     })
+    app.delete('/mobilia/:id', (request, response) =>{
+        const id =request.params.id
+        mobiliaDb.deteleMobiliaFromId(id)
+        .then(() => {
+            response.json({
+                message: "Mobilia deletado com sucesso"
+            })
+        })
+        .catch((err)=>{
+            response.json({
+                message: "Erro ao deletar Mobilia",
+                Error:err
+            })
+        })
+    })
 }
