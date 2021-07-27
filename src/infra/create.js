@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3')
-const db = new sqlite3.Database('./src/infra/database.db')
+const db = new sqlite3.Database('./ /infra/database.db')
 
 const MOBILIA_SCHEMA = `
 CREATE TABLE IF NOT EXISTS "MOBILIA" (
